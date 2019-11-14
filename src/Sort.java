@@ -7,8 +7,18 @@ public class Sort {
                 12.25, 8.25, 13.25, 13.75, 12, 10.75, 11.25, 2.25,
                 7.25, 12.75, 8.25, 12.75, 5.25, 12.25, 12.75, 13.25, 5.75};
 
-        double[] groupMarksChet = new double[groupMarks.length / 2];
-        double[] groupMarksNeChet = new double[groupMarks.length / 2];
+
+        double[] groupMarksChet;
+        double[] groupMarksNeChet;
+
+        if(groupMarks.length % 2 == 0){
+            groupMarksChet = new double[groupMarks.length / 2];
+            groupMarksNeChet = new double[groupMarks.length / 2];
+        }
+        else{
+            groupMarksChet = new double[groupMarks.length / 2 + 1];
+            groupMarksNeChet = new double[groupMarks.length / 2];
+        }
 
         for (int i = 0; i < groupMarks.length; i++) {
             if(i % 2 == 0) groupMarksChet[i / 2] = groupMarks[i];
