@@ -1,12 +1,13 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Sort {
     public static void main(String[] args) {
-
-        double[] groupMarks = new double[]{12.75, 11.25, 9.75, 5.75, 6.25, 13.75, 6.25, 12.75, 13.75,
-                12.25, 8.25, 13.25, 13.75, 12, 10.75, 11.25, 2.25,
-                7.25, 12.75, 8.25, 12.75, 5.25, 12.25, 12.75, 13.25, 5.75};
-
+        Scanner in = new Scanner(System.in);
+        double[] groupMarks = new double[25];
+        for (int i = 0; i < 25; i++) {
+            groupMarks[i] = in.nextDouble();
+        }
 
         double[] groupMarksChet;
         double[] groupMarksNeChet;
